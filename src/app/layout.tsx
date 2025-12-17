@@ -8,11 +8,19 @@ import { Toaster } from "@/components/ui/sonner";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: 'swap',
+  preload: true,
+  fallback: ['system-ui', 'arial'],
+  adjustFontFallback: true,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: 'swap',
+  preload: true,
+  fallback: ['monospace'],
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
@@ -58,7 +66,7 @@ export default function RootLayout({
       >
         <div className="min-h-screen flex flex-col">
           <Header />
-          <main className="flex-1">
+          <main id="main-content" className="flex-1" tabIndex={-1}>
             {children}
           </main>
           <Footer />

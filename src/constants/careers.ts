@@ -1,8 +1,8 @@
-import { Code, Palette, Briefcase, BarChart3, Users } from "lucide-react";
+import { Code, Palette, Briefcase, BarChart3, Users, Radio, Network } from "lucide-react";
 
 // Email configuration
 export const CAREERS_CONFIG = {
-  applicationEmail: "shankarsumit49@gmail.com",
+  applicationEmail: "dpbsolution.job@gmail.com",
   googleFormId: "", // Add your Google Form ID here or leave empty to use built-in form
   hasOpenings: true, // Set to false to hide all positions and show "no openings" message
 };
@@ -10,99 +10,107 @@ export const CAREERS_CONFIG = {
 // Job positions data
 export const POSITIONS = [
   {
-    title: "Senior Full Stack Developer",
-    department: "Engineering",
-    location: "San Francisco, CA / Remote",
+    title: "ISP Engineer",
+    department: "Network Engineering",
+    location: "Munshipalli Maharajganj (Telangana)",
     type: "Full-time",
-    salary: "$120k - $180k",
-    icon: Code,
+    salary: "Competitive",
+    icon: Network,
     description:
-      "Join our engineering team to build scalable web applications using React, Node.js, and cloud technologies.",
+      "Join our network engineering team to design, deploy, and maintain Internet Service Provider infrastructure. Work with cutting-edge telecommunications technology to deliver reliable connectivity solutions.",
     requirements: [
-      "5+ years of full-stack development experience",
-      "Proficiency in React, Node.js, and TypeScript",
-      "Experience with cloud platforms (AWS, Azure, GCP)",
-      "Strong problem-solving and communication skills",
+      "0-5 years of experience in relevant field",
+      "Graduate/Diploma (ELE/ ECE/ IT/Telecom)",
+      "Experience / As a Fiber/ ISP Engineer",
+      "Remarks: Local candidate preferred",
+      "Strong understanding of network protocols and ISP operations",
+      "Experience with network configuration and troubleshooting",
     ],
   },
   {
-    title: "UX/UI Designer",
-    department: "Design",
-    location: "Austin, TX / Remote",
+    title: "Fiber Engineer",
+    department: "Field Operations",
+    location: "Vangal (Tamilnadu)",
     type: "Full-time",
-    salary: "$90k - $130k",
-    icon: Palette,
+    salary: "Competitive",
+    icon: Radio,
     description:
-      "Create exceptional user experiences and beautiful interfaces for our client projects and internal tools.",
+      "Be part of our field operations team responsible for fiber optic network installation, maintenance, and optimization. Work on expanding our fiber infrastructure to connect communities.",
     requirements: [
-      "3+ years of UX/UI design experience",
-      "Proficiency in Figma, Sketch, or Adobe XD",
-      "Strong portfolio demonstrating design thinking",
-      "Experience with user research and usability testing",
+      "0-5 years of experience in relevant field",
+      "Graduate/Diploma (ELE/ ECE/ IT/Telecom)",
+      "Experience / As a Fiber/ ISP Engineer",
+      "Remarks: Local candidate preferred",
+      "Knowledge of fiber optic cable installation and splicing",
+      "Understanding of FTTH/FTTX deployment",
     ],
   },
   {
-    title: "DevOps Engineer",
-    department: "Infrastructure",
-    location: "Seattle, WA / Remote",
+    title: "Network Operations Engineer",
+    department: "Network Engineering",
+    location: "Patna, Bihar / Hybrid",
     type: "Full-time",
-    salary: "$110k - $160k",
+    salary: "₹4L - ₹8L per annum",
+    icon: Network,
+    description:
+      "Monitor and maintain our telecommunications network infrastructure. Ensure optimal performance, troubleshoot issues, and implement network improvements.",
+    requirements: [
+      "2+ years of network operations experience",
+      "Knowledge of routing protocols (BGP, OSPF, MPLS)",
+      "Experience with network monitoring tools",
+      "Understanding of telecom infrastructure",
+      "Strong analytical and problem-solving skills",
+    ],
+  },
+  {
+    title: "Telecom Project Manager",
+    department: "Operations",
+    location: "Patna, Bihar / Remote",
+    type: "Full-time",
+    salary: "₹6L - ₹12L per annum",
     icon: Briefcase,
     description:
-      "Build and maintain CI/CD pipelines, manage cloud infrastructure, and ensure system reliability.",
+      "Lead telecommunications infrastructure projects from planning to deployment. Coordinate with technical teams, vendors, and stakeholders to ensure successful project delivery.",
     requirements: [
-      "4+ years of DevOps/Infrastructure experience",
-      "Experience with Docker, Kubernetes, and Terraform",
-      "Knowledge of AWS/Azure cloud services",
-      "Strong scripting skills (Python, Bash)",
+      "3+ years of telecom project management experience",
+      "PMP or similar certification preferred",
+      "Experience with fiber deployment projects",
+      "Strong leadership and communication skills",
+      "Knowledge of telecom regulations and standards",
     ],
   },
   {
-    title: "Data Scientist",
-    department: "Analytics",
-    location: "Boston, MA / Remote",
+    title: "Network Security Specialist",
+    department: "Security",
+    location: "Remote",
     type: "Full-time",
-    salary: "$100k - $150k",
-    icon: BarChart3,
-    description:
-      "Analyze complex data sets, build predictive models, and derive actionable insights for our clients.",
-    requirements: [
-      "3+ years of data science experience",
-      "Proficiency in Python, R, and SQL",
-      "Experience with machine learning frameworks",
-      "Strong statistical analysis skills",
-    ],
-  },
-  {
-    title: "Project Manager",
-    department: "Operations",
-    location: "New York, NY / Remote",
-    type: "Full-time",
-    salary: "$85k - $120k",
-    icon: Users,
-    description:
-      "Lead cross-functional teams to deliver client projects on time and within budget.",
-    requirements: [
-      "3+ years of project management experience",
-      "PMP or Agile certification preferred",
-      "Experience with software development projects",
-      "Excellent communication and leadership skills",
-    ],
-  },
-  {
-    title: "Frontend Developer (Intern)",
-    department: "Engineering",
-    location: "San Francisco, CA",
-    type: "Internship",
-    salary: "$25 - $35/hour",
+    salary: "₹5L - ₹10L per annum",
     icon: Code,
     description:
-      "Learn and contribute to frontend development using modern frameworks and tools.",
+      "Protect our network infrastructure and customer data. Implement security protocols, monitor for threats, and ensure compliance with industry standards.",
     requirements: [
-      "Currently pursuing CS degree or related field",
-      "Basic knowledge of HTML, CSS, JavaScript",
-      "Familiarity with React or similar frameworks",
-      "Eager to learn and grow",
+      "3+ years of network security experience",
+      "Knowledge of firewalls, VPNs, and security protocols",
+      "Experience with security monitoring tools",
+      "Understanding of telecom security standards",
+      "Relevant certifications (CISSP, CEH) preferred",
+    ],
+  },
+  {
+    title: "Field Technician (Trainee)",
+    department: "Field Operations",
+    location: "Patna, Bihar",
+    type: "Full-time / Trainee",
+    salary: "₹2L - ₹3.5L per annum",
+    icon: Radio,
+    description:
+      "Start your career in telecommunications. Learn fiber optic installation, network equipment setup, and field operations under experienced mentors.",
+    requirements: [
+      "ITI/Diploma in Electronics/Electrical",
+      "Willingness to work in field conditions",
+      "Basic understanding of networking",
+      "Good communication skills",
+      "Eager to learn and grow in telecom sector",
     ],
   },
 ];

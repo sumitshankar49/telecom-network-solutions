@@ -27,7 +27,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className={`sticky top-0 z-50 transition-all duration-300 ${
+    <nav aria-label="Main navigation" className={`sticky top-0 z-50 transition-all duration-300 ${
       scrolled 
         ? 'shadow-lg border-b border-gray-200' 
         : 'bg-transparent'
@@ -35,7 +35,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center" aria-label="DBP Solution - Home">
             <span className={`text-2xl font-bold transition-colors duration-300 ${
               scrolled ? 'text-blue-700' : 'text-white'
             }`} style={{ textShadow: scrolled ? 'none' : '2px 2px 4px rgba(0,0,0,0.8)' }}>
@@ -83,18 +83,20 @@ export default function Navbar() {
               variant="ghost"
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
-              aria-label="Toggle menu"
+              aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
               className={scrolled ? 'text-gray-900' : 'text-white'}
               style={{ textShadow: scrolled ? 'none' : '1px 1px 3px rgba(0,0,0,0.8)' }}
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
             </Button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden">
+          <div className="md:hidden" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
               {navLinks.map((link) => (
                 <Link

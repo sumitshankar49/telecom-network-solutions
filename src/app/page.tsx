@@ -62,10 +62,15 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/max-iGsjSLxnAe8-unsplash.jpg"
-            alt="DBP Solutions Background"
+            alt="Modern telecommunications infrastructure and network connectivity showcasing DBP Solutions expertise"
             fill
             className="object-cover brightness-50"
             priority
+            quality={85}
+            sizes="100vw"
+            role="img"
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
           />
           <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/30 to-black/50" />
         </div>

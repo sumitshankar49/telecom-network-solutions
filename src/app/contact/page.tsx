@@ -197,6 +197,8 @@ export default function ContactPage() {
                               onChange={handleChange}
                               placeholder="John"
                               className="transition-all duration-200 focus:scale-[1.01] h-11"
+                              aria-label="First Name"
+                              aria-required="true"
                             />
                           </div>
                           <div>
@@ -211,6 +213,8 @@ export default function ContactPage() {
                               onChange={handleChange}
                               placeholder="Doe"
                               className="transition-all duration-200 focus:scale-[1.01] h-11"
+                              aria-label="Last Name"
+                              aria-required="true"
                             />
                           </div>
                         </motion.div>
@@ -227,6 +231,8 @@ export default function ContactPage() {
                             onChange={handleChange}
                             placeholder="john@example.com"
                             className="transition-all duration-200 focus:scale-[1.01] h-11"
+                            aria-label="Email Address"
+                            aria-required="true"
                           />
                         </motion.div>
                         <motion.div variants={itemVariants}>
@@ -241,6 +247,8 @@ export default function ContactPage() {
                             onChange={handleChange}
                             placeholder="Your Company"
                             className="transition-all duration-200 focus:scale-[1.01] h-11"
+                            aria-label="Company Name"
+                            aria-required="true"
                           />
                         </motion.div>
                         <motion.div variants={itemVariants}>
@@ -256,6 +264,8 @@ export default function ContactPage() {
                             placeholder="Tell us about your project..."
                             rows={5}
                             className="transition-all duration-200 focus:scale-[1.01] resize-none"
+                            aria-label="Your Message"
+                            aria-required="true"
                           />
                         </motion.div>
                         <motion.div variants={itemVariants}>
@@ -263,6 +273,8 @@ export default function ContactPage() {
                             type="submit" 
                             disabled={isSubmitting || !isFormValid}
                             className="w-full bg-blue-600 hover:bg-blue-700 text-white border-2 border-blue-700 hover:border-blue-800 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 h-12 text-base font-semibold"
+                            aria-label={isSubmitting ? "Sending message" : "Send message"}
+                            aria-busy={isSubmitting}
                           >
                             {isSubmitting ? (
                               "Sending..."

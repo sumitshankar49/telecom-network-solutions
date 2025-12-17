@@ -182,10 +182,16 @@ export default function CareersPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/kirill-sh-eVWWr6nmDf8-unsplash.jpg"
-            alt="Team collaboration at DPB Solutions"
+            alt="Collaborative team environment at DPB Solution with professionals working together on innovative telecom projects"
             fill
             className="object-cover opacity-30"
-            priority
+            loading="lazy"
+            quality={80}
+            sizes="100vw"
+            role="img"
+            aria-hidden="false"
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
           />
           <div className="absolute inset-0 bg-linear-to-r from-blue-900/80 to-slate-900/80"></div>
         </div>
@@ -237,9 +243,15 @@ export default function CareersPage() {
               <div className="relative h-72 lg:h-96 rounded-xl overflow-hidden shadow-2xl">
                 <Image
                   src="/images/kevin-bhagat-zNRITe8NPqY-unsplash.jpg"
-                  alt="Modern workspace at DBP Solutions"
+                  alt="Modern open office workspace featuring collaborative areas and advanced technology at DBP Solution"
                   fill
                   className="object-cover"
+                  loading="lazy"
+                  quality={85}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
+                  role="img"
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                 />
               </div>
               {/* Stats Card */}
@@ -268,9 +280,16 @@ export default function CareersPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/andrei-andreew-fdCZMmVIRlE-unsplash.jpg"
-            alt="Office workspace background"
+            alt="Professional office environment showcasing modern workplace at DBP Solution"
             fill
             className="object-cover opacity-10"
+            loading="lazy"
+            quality={75}
+            sizes="100vw"
+            role="img"
+            aria-hidden="false"
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
           />
           <div className="absolute inset-0 bg-linear-to-br from-white/95 to-blue-50/90"></div>
         </div>

@@ -4,11 +4,11 @@ import { ArrowRight, Radio, Wifi, Satellite, Network } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative bg-linear-to-br from-blue-50 via-teal-50 to-blue-100 py-20 overflow-hidden">
+    <section className="relative bg-linear-to-br from-blue-50 via-teal-50 to-blue-100 py-20 overflow-hidden" aria-labelledby="hero-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h1 id="hero-heading" className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             <span className="text-blue-700">Connecting the Future</span>
             <br />
             <span className="text-teal-600">with Advanced Telecom</span>
@@ -23,22 +23,22 @@ export default function Hero() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Link href="/contact">
-              <Button size="lg" className="bg-blue-700 hover:bg-blue-800 text-white px-8 py-3">
+              <Button size="lg" className="bg-blue-700 hover:bg-blue-800 text-white px-8 py-3" aria-label="Contact us to get connected today">
                 Get Connected Today
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
               </Button>
             </Link>
             <Link href="/services">
-              <Button variant="outline" size="lg" className="border-teal-600 text-teal-700 hover:bg-teal-50 px-8 py-3">
+              <Button variant="outline" size="lg" className="border-teal-600 text-teal-700 hover:bg-teal-50 px-8 py-3" aria-label="Explore our telecommunications network and services">
                 Explore Our Network
               </Button>
             </Link>
           </div>
 
           {/* Feature Icons */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <div className="flex flex-col items-center text-center">
-              <div className="bg-blue-100 p-4 rounded-full mb-4 animate-pulse-network">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto" role="list" aria-label="Key telecommunications features">
+            <div className="flex flex-col items-center text-center" role="listitem">
+              <div className="bg-blue-100 p-4 rounded-full mb-4 animate-pulse-network" aria-hidden="true">
                 <Radio className="h-8 w-8 text-blue-700" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">5G Networks</h3>
@@ -47,8 +47,8 @@ export default function Hero() {
               </p>
             </div>
             
-            <div className="flex flex-col items-center text-center">
-              <div className="bg-teal-100 p-4 rounded-full mb-4 animate-pulse-network animation-delay-2000">
+            <div className="flex flex-col items-center text-center" role="listitem">
+              <div className="bg-teal-100 p-4 rounded-full mb-4 animate-pulse-network animation-delay-2000" aria-hidden="true">
                 <Wifi className="h-8 w-8 text-teal-600" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">IoT Solutions</h3>
@@ -57,8 +57,8 @@ export default function Hero() {
               </p>
             </div>
             
-            <div className="flex flex-col items-center text-center">
-              <div className="bg-blue-100 p-4 rounded-full mb-4 animate-pulse-network animation-delay-4000">
+            <div className="flex flex-col items-center text-center" role="listitem">
+              <div className="bg-blue-100 p-4 rounded-full mb-4 animate-pulse-network animation-delay-4000" aria-hidden="true">
                 <Satellite className="h-8 w-8 text-blue-700" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Satellite Comm</h3>
@@ -67,8 +67,8 @@ export default function Hero() {
               </p>
             </div>
             
-            <div className="flex flex-col items-center text-center">
-              <div className="bg-teal-100 p-4 rounded-full mb-4 animate-pulse-network">
+            <div className="flex flex-col items-center text-center" role="listitem">
+              <div className="bg-teal-100 p-4 rounded-full mb-4 animate-pulse-network" aria-hidden="true">
                 <Network className="h-8 w-8 text-teal-600" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Network Infrastructure</h3>
