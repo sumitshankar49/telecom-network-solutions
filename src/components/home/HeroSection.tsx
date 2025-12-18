@@ -1,0 +1,132 @@
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { ArrowRight, Zap } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { companyInfo } from "@/data/site-data";
+
+const fadeIn = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6 }
+};
+
+const stagger = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+export function HeroSection() {
+  return (
+    <section className="relative overflow-hidden min-h-[85vh] lg:min-h-[90vh] flex items-center">
+      {/* Background Image with Dark Overlay */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/max-iGsjSLxnAe8-unsplash.jpg"
+          alt="Modern telecommunications infrastructure and network connectivity showcasing DBP Solutions expertise"
+          fill
+          className="object-cover brightness-50"
+          priority
+          quality={85}
+          sizes="100vw"
+          role="img"
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+        />
+        <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/30 to-black/50" />
+      </div>
+      
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+        <motion.div
+          className="max-w-4xl mx-auto text-center"
+          initial="initial"
+          animate="animate"
+          variants={stagger}
+        >
+          <motion.div variants={fadeIn} className="mb-6">
+            <span className="inline-flex items-center px-5 py-2.5 rounded-full text-sm font-semibold bg-white text-gray-900 shadow-xl">
+              <Zap className="w-4 h-4 mr-2 text-blue-600" />
+              {companyInfo.tagline}
+            </span>
+          </motion.div>
+
+          <motion.h1 
+            variants={fadeIn}
+            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6"
+            style={{ textShadow: '2px 4px 12px rgba(0,0,0,0.9)' }}
+          >
+            <span className="text-white">DPB</span>{" "}
+            <span className="text-blue-500">Solution</span>{" "}
+            <span className="block mt-2 text-white">Transform Your Operations.</span>
+          </motion.h1>
+
+          <motion.p
+            variants={fadeIn}
+            className="text-lg md:text-xl text-white mb-10 max-w-3xl mx-auto leading-relaxed font-medium"
+            style={{ textShadow: '1px 2px 8px rgba(0,0,0,0.9)' }}
+          >
+            {companyInfo.description}
+          </motion.p>
+
+          <motion.div 
+            variants={fadeIn}
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
+          >
+            <Button size="lg" className="text-lg px-8 py-6 bg-blue-600  text-white border-2  shadow-2xl" asChild>
+              <Link href="/contact">
+                Get Started Today
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button size="lg" variant="outline" className="text-lg px-8 py-6  bg-white hover:bg-gray-100 text-gray-900 border-2 shadow-2xl" asChild>
+              <Link href="/services">
+                Explore Services
+              </Link>
+            </Button>
+          </motion.div>
+
+          {/* Stats */}
+          <motion.div 
+            variants={fadeIn}
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto"
+          >
+            <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg py-6 px-8 border border-white/20 flex flex-col items-center justify-center">
+              <div className="text-4xl md:text-5xl font-bold text-white mb-3" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
+                {companyInfo.clients}
+              </div>
+              <div className="text-sm md:text-base text-white font-semibold leading-tight" style={{ textShadow: '1px 1px 6px rgba(0,0,0,0.8)' }}>
+                Happy Clients
+              </div>
+            </div>
+            <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg py-6 px-8 border border-white/20 flex flex-col items-center justify-center">
+              <div className="text-4xl md:text-5xl font-bold text-white mb-3" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
+                {companyInfo.employees}
+              </div>
+              <div className="text-sm md:text-base text-white font-semibold leading-tight" style={{ textShadow: '1px 1px 6px rgba(0,0,0,0.8)' }}>
+                Team Members
+              </div>
+            </div>
+            <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg py-6 px-8 border border-white/20 flex flex-col items-center justify-center">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-3 leading-tight" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
+                Multiple Cities in India
+              </div>
+            </div>
+            <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg py-6 px-8 border border-white/20 flex flex-col items-center justify-center">
+              <div className="text-4xl md:text-5xl font-bold text-white mb-3" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
+                15+
+              </div>
+              <div className="text-sm md:text-base text-white font-semibold leading-tight" style={{ textShadow: '1px 1px 6px rgba(0,0,0,0.8)' }}>
+                Years Experience
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}

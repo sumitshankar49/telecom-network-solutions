@@ -1,4 +1,4 @@
-import { Zap, Users, Award, Globe, ArrowRight, CheckCircle } from "lucide-react";
+import { Zap, Users, Award, Globe, CheckCircle } from "lucide-react";
 
 // Home page hero section
 export const HOME_HERO = {

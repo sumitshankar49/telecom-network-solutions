@@ -32,30 +32,8 @@ import {
   CULTURE_VALUES, 
   COMPANY_STATS, 
   HIRING_PROCESS 
-} from "@/constants";
-
-const fadeInUp = {
-  initial: { opacity: 0, y: 60 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-100px" },
-  transition: { duration: 0.6 }
-};
-
-const scaleIn = {
-  initial: { opacity: 0, scale: 0.8 },
-  whileInView: { opacity: 1, scale: 1 },
-  viewport: { once: true, margin: "-100px" },
-  transition: { duration: 0.6 }
-};
-
-const staggerContainer = {
-  initial: {},
-  whileInView: {
-    transition: {
-      staggerChildren: 0.15
-    }
-  }
-};
+} from "@/constants/careers";
+import { fadeInUp, scaleIn, staggerContainer } from "@/lib/animations";
 
 export default function CareersPage() {
   const [selectedPosition, setSelectedPosition] = useState<string | null>(null);

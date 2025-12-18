@@ -10,12 +10,18 @@ const nextConfig: NextConfig = {
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
-  // Enable SWC minification for improved performance
-  swcMinify: true,
   // Optimize production builds
   productionBrowserSourceMaps: false,
   // Enable compression
   compress: true,
+  // Enable experimental optimizations
+  experimental: {
+    optimizePackageImports: ['framer-motion', 'lucide-react'],
+  },
+  // Compiler optimizations
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
 };
 
 export default nextConfig;

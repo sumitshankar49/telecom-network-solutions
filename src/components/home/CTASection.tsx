@@ -1,0 +1,40 @@
+"use client";
+
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { fadeInUp } from "@/lib/animations";
+
+export function CTASection() {
+  return (
+    <section className="py-24 lg:py-32 bg-modern-gradient">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          {...fadeInUp}
+          className="text-center max-w-3xl mx-auto"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-white/80 mb-8">
+            Join over 1,200 businesses that trust DPB Solution for their IT and telecommunications needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" variant="secondary" className="text-lg px-8 py-6" asChild>
+              <Link href="/contact">
+                Get Free Consultation
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button size="lg" variant="outline" className="text-lg px-8 py-6 text-white border-white hover:bg-white hover:text-violet-600" asChild>
+              <Link href="/services">
+                View Our Services
+              </Link>
+            </Button>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}

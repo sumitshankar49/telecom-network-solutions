@@ -42,13 +42,6 @@ export function Header() {
           ))}
         </nav>
 
-        {/* Desktop Actions */}
-        <div className="hidden md:flex items-center space-x-4">
-          <Button asChild>
-            <Link href="/contact">Get Started</Link>
-          </Button>
-        </div>
-
         {/* Mobile Menu Button */}
         <div className="flex items-center space-x-2 md:hidden">
           <Button
@@ -89,13 +82,6 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
-            <div className="pt-2">
-              <Button asChild className="w-full">
-                <Link href="/contact" onClick={() => setIsOpen(false)}>
-                  Get Started
-                </Link>
-              </Button>
-            </div>
           </nav>
         </motion.div>
       )}

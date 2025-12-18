@@ -1,4 +1,4 @@
-import { Code, Palette, Briefcase, BarChart3, Users, Radio, Network } from "lucide-react";
+import { Code, Briefcase, Radio, Network } from "lucide-react";
 
 // Email configuration
 export const CAREERS_CONFIG = {
