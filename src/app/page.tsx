@@ -1,8 +1,10 @@
-import { HeroSection } from "@/components/home/HeroSection";
-import { ServicesSection } from "@/components/home/ServicesSection";
-import { FeaturesSection } from "@/components/home/FeaturesSection";
-import { TestimonialsSection } from "@/components/home/TestimonialsSection";
-import { CTASection } from "@/components/home/CTASection";
+import { 
+  HeroSection,
+  ServicesSection,
+  FeaturesSection,
+  TestimonialsSection,
+  CTASection 
+} from "@/components/features/home";
 
 export default function Home() {
   return (

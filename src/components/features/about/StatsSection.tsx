@@ -6,10 +6,10 @@ import { scaleIn, staggerContainer } from "@/lib/animations";
 
 export function StatsSection() {
   const stats = [
-    { icon: Users, label: "Team Members", value: "50+" },
-    { icon: Target, label: "Projects Completed", value: "200+" },
-    { icon: Award, label: "Years Experience", value: "10+" },
-    { icon: Globe, label: "Countries Served", value: "25+" },
+    { icon: Users, label: "Team Members", value: "100+" },
+    { icon: Target, label: "Happy Clients", value: "80+" },
+    { icon: Award, label: "Years Experience", value: "16+" },
+    { icon: Globe, label: "Cities in India", value: "Multiple" },
   ];
 
   return (

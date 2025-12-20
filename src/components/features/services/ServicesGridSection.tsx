@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ServiceCard } from "@/components/service-card";
-import { services } from "@/data/site-data";
+import { ServiceCard } from "@/components/common/ServiceCard";
+import { services } from "@/config/site";
 import { fadeInUp, scaleIn, staggerContainer } from "@/lib/animations";
 
 export function ServicesGridSection() {
@@ -28,7 +28,6 @@ export function ServicesGridSection() {
                 description={service.shortDescription}
                 icon={service.icon}
                 features={service.features}
-                pricing={service.pricing}
                 popular={service.popular}
                 onLearnMore={() => {}}
               />

@@ -21,13 +21,13 @@ export function CTASection() {
             Join over 1,200 businesses that trust DPB Solution for their IT and telecommunications needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="text-lg px-8 py-6" asChild>
+            <Button size="lg" className="text-lg px-8 py-6 bg-blue-600 text-white shadow-2xl" asChild>
               <Link href="/contact">
                 Get Free Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6 text-white border-white hover:bg-white hover:text-violet-600" asChild>
+            <Button size="lg" variant="outline" className="text-lg px-8 py-6 bg-white hover:bg-gray-100 text-gray-900 shadow-2xl" asChild>
               <Link href="/services">
                 View Our Services
               </Link>

@@ -66,7 +66,7 @@ export const siteContent = {
     { number: "1M+", label: "Connected Devices" },
     { number: "99.9%", label: "Network Uptime" },
     { number: "25+", label: "Countries Served" },
-    { number: "15", label: "Years Experience" }
+    { number: "16", label: "Years Experience" }
   ],
 
   // Services

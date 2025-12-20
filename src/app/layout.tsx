@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 import { Toaster } from "@/components/ui/sonner";
 
 const geistSans = Geist({
@@ -24,33 +24,87 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DPB Solution - Telecommunications & IT Solutions",
-  description: "Leading provider of telecommunications and IT solutions, connecting businesses to the future with cutting-edge technology and unparalleled service.",
-  keywords: "telecommunications, IT solutions, internet, cloud services, VoIP, cybersecurity, managed services",
-  authors: [{ name: "DPB Solution" }],
-  creator: "DPB Solution",
-  publisher: "DPB Solution",
+  metadataBase: new URL('https://dpbsolution.com'),
+  title: {
+    default: "DBP Solution - Telecommunications & IT Solutions",
+    template: "%s | DBP Solution",
+  },
+  description: "Leading provider of telecommunications and IT solutions, connecting businesses to the future with cutting-edge technology and unparalleled service. Empowering Digital Transformation since 2009.",
+  keywords: [
+    "telecommunications",
+    "IT solutions",
+    "internet services",
+    "cloud services",
+    "VoIP",
+    "cybersecurity",
+    "managed IT services",
+    "digital transformation",
+    "network infrastructure",
+    "enterprise solutions",
+    "India telecom",
+    "Patna IT services"
+  ],
+  authors: [{ name: "DBP Solution Pvt. Ltd." }],
+  creator: "DBP Solution Pvt. Ltd.",
+  publisher: "DBP Solution Pvt. Ltd.",
+  applicationName: "DBP Solution",
+  referrer: 'origin-when-cross-origin',
+  category: 'technology',
   openGraph: {
-    title: "DPB Solution - Telecommunications & IT Solutions",
-    description: "Leading provider of telecommunications and IT solutions.",
-    url: "https://dpbsolution.com",
-    siteName: "DPB Solution",
     type: "website",
+    locale: "en_IN",
+    url: "https://dpbsolution.com",
+    siteName: "DBP Solution",
+    title: "DBP Solution - Telecommunications & IT Solutions",
+    description: "Leading provider of telecommunications and IT solutions. Empowering Digital Transformation with cutting-edge technology and unparalleled service since 2009.",
+    images: [
+      {
+        url: "/images/logo.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "DBP Solution - Telecommunications & IT Solutions",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "DPB Solution - Telecommunications & IT Solutions",
-    description: "Leading provider of telecommunications and IT solutions.",
+    title: "DBP Solution - Telecommunications & IT Solutions",
+    description: "Leading provider of telecommunications and IT solutions. Empowering Digital Transformation since 2009.",
     creator: "@dpbsolution",
+    images: ["/images/logo.jpeg"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
+  },
+  verification: {
+    google: 'your-google-verification-code',
+  },
+  icons: {
+    icon: [
+      { url: '/images/logo.jpeg', sizes: '32x32', type: 'image/jpeg' },
+      { url: '/images/logo.jpeg', sizes: '192x192', type: 'image/jpeg' },
+    ],
+    shortcut: '/images/logo.jpeg',
+    apple: '/images/logo.jpeg',
+    other: [
+      {
+        rel: 'icon',
+        url: '/images/logo.jpeg',
+      },
+    ],
   },
 };
 

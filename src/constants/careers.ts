@@ -48,7 +48,7 @@ export const POSITIONS = [
   {
     title: "Network Operations Engineer",
     department: "Network Engineering",
-    location: "Patna, Bihar / Hybrid",
+    location: "Patna, Bihar / Onsite",
     type: "Full-time",
     salary: "₹4L - ₹8L per annum",
     icon: Network,
@@ -82,7 +82,7 @@ export const POSITIONS = [
   {
     title: "Network Security Specialist",
     department: "Security",
-    location: "Remote",
+    location: "Patna, Bihar / Onsite",
     type: "Full-time",
     salary: "₹5L - ₹10L per annum",
     icon: Code,

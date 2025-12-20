@@ -4,8 +4,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ServiceCard } from "@/components/service-card";
-import { services } from "@/data/site-data";
+import { ServiceCard } from "@/components/common/ServiceCard";
+import { services } from "@/config/site";
 import { fadeInUp, scaleIn, staggerContainer } from "@/lib/animations";
 
 export function ServicesSection() {
@@ -37,7 +37,6 @@ export function ServicesSection() {
                 description={service.shortDescription}
                 icon={service.icon}
                 features={service.features}
-                pricing={service.pricing}
                 popular={service.popular}
                 onLearnMore={() => window.location.href = '/services'}
               />

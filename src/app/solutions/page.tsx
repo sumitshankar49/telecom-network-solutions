@@ -3,12 +3,12 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle, Users, Building, Shield, Zap, Heart, Target, Award, Phone, Mail, ExternalLink } from "lucide-react";
+import { ArrowRight, CheckCircle, Users, Building, Shield, Zap, Heart, Target, Award, Phone,ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { solutions } from "@/data/site-data";
+import { solutions } from "@/config/site";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -138,11 +138,15 @@ export default function SolutionsPage() {
           </motion.div>
 
           <Tabs value={selectedIndustry} onValueChange={setSelectedIndustry} className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-12">
+            <TabsList className="grid w-full grid-cols-3 mb-12 gap-2 bg-transparent p-0">
               {solutions.map((solution) => {
                 const IconComponent = industryIcons[solution.id];
                 return (
-                  <TabsTrigger key={solution.id} value={solution.id} className="flex items-center gap-2">
+                  <TabsTrigger 
+                    key={solution.id} 
+                    value={solution.id} 
+                    className="flex items-center gap-2 border-2 border-gray-200 bg-white shadow-sm hover:border-blue-500 hover:shadow-md data-[state=active]:border-blue-600 data-[state=active]:bg-blue-50 data-[state=active]:text-blue-700 data-[state=active]:shadow-lg transition-all duration-300 rounded-lg py-3 px-4"
+                  >
                     <IconComponent className="w-4 h-4" />
                     {solution.title.split(' ')[0]}
                   </TabsTrigger>
@@ -398,40 +402,6 @@ export default function SolutionsPage() {
                 </div>
               </motion.div>
             </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-modern-gradient">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={fadeIn}
-            className="text-center max-w-3xl mx-auto"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Industry Operations?
-            </h2>
-            <p className="text-xl text-white/80 mb-8">
-              Let&apos;s discuss how our industry-specific solutions can address your unique challenges and drive growth.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="text-lg px-8 py-6" asChild>
-                <Link href="/contact">
-                  Schedule Consultation
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-6 text-white border-white hover:bg-white hover:text-violet-600" asChild>
-                <Link href="/services">
-                  <Mail className="mr-2 h-5 w-5" />
-                  Contact Sales Team
-                </Link>
-              </Button>
-            </div>
           </motion.div>
         </div>
       </section>

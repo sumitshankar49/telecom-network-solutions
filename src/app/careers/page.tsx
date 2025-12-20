@@ -139,7 +139,14 @@ export default function CareersPage() {
             in a collaborative and innovative environment.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8">
+            <Button 
+              size="lg" 
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8"
+              onClick={() => {
+                const element = document.getElementById('open-positions');
+                element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}
+            >
               View Open Positions
             </Button>
             <Link href="/about">
@@ -176,7 +183,7 @@ export default function CareersPage() {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">Why Work at DBP Solution?</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">Why Work at DPB Solution?</h2>
             <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
               We believe in creating an environment where talented people can do their best work
             </p>
@@ -221,7 +228,7 @@ export default function CareersPage() {
               <div className="relative h-72 lg:h-96 rounded-xl overflow-hidden shadow-2xl">
                 <Image
                   src="/images/kevin-bhagat-zNRITe8NPqY-unsplash.jpg"
-                  alt="Modern open office workspace featuring collaborative areas and advanced technology at DBP Solution"
+                  alt="Modern open office workspace featuring collaborative areas and advanced technology at DPB Solution"
                   fill
                   className="object-cover"
                   loading="lazy"
@@ -248,6 +255,7 @@ export default function CareersPage() {
 
       {/* Open Positions */}
       <motion.section
+        id="open-positions"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
@@ -258,7 +266,7 @@ export default function CareersPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/andrei-andreew-fdCZMmVIRlE-unsplash.jpg"
-            alt="Professional office environment showcasing modern workplace at DBP Solution"
+            alt="Professional office environment showcasing modern workplace at DPB Solution"
             fill
             className="object-cover opacity-10"
             loading="lazy"

@@ -1,9 +1,11 @@
-import { AboutHeroSection } from "@/components/about/AboutHeroSection";
-import { StatsSection } from "@/components/about/StatsSection";
-import { MissionVisionSection } from "@/components/about/MissionVisionSection";
-import { CompanyStorySection } from "@/components/about/CompanyStorySection";
-import { TeamSection } from "@/components/about/TeamSection";
-import { ValuesSection } from "@/components/about/ValuesSection";
+import {
+  AboutHeroSection,
+  StatsSection,
+  MissionVisionSection,
+  CompanyStorySection,
+  TeamSection,
+  ValuesSection
+} from "@/components/features/about";
 
 export default function AboutPage() {
   return (

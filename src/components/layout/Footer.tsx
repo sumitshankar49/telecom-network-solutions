@@ -66,6 +66,7 @@ export function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-3 text-sm uppercase tracking-wider">Get Started</h3>
             <ul className="space-y-1.5">
+              <li><Link href="/contact" className="text-sm hover:text-white transition-colors">Request a Quote</Link></li>
               <li><Link href="/" className="text-sm hover:text-white transition-colors">Free Consultation</Link></li>
               <li><Link href="/about" className="text-sm hover:text-white transition-colors">Learn More</Link></li>
             </ul>

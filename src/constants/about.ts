@@ -4,7 +4,7 @@ import { Users, Target, Award, Globe } from "lucide-react";
 export const ABOUT_STATS = [
   { icon: Users, label: "Team Members", value: "50+" },
   { icon: Target, label: "Projects Completed", value: "200+" },
-  { icon: Award, label: "Years Experience", value: "10+" },
+  { icon: Award, label: "Years Experience", value: "16+" },
   { icon: Globe, label: "Countries Served", value: "25+" },
 ];
 
