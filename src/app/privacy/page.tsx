@@ -7,21 +7,19 @@ export default function PrivacyPolicyPage() {
   const [activeSection, setActiveSection] = useState("");
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pt-16">
       {/* Header */}
-      <header className="bg-gray-50 border-b border-gray-200 py-8 sticky top-16 z-10">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900">Privacy Policy</h1>
-          </div>
+      <header className="bg-gray-50 border-b border-gray-200 py-12">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+          <h1 className="text-4xl font-bold text-gray-900">Privacy Policy</h1>
         </div>
       </header>
 
-      <div className="container mx-auto px-4 py-12 max-w-7xl">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 max-w-7xl">
         <div className="grid lg:grid-cols-4 gap-12">
           {/* Table of Contents - Sidebar */}
           <aside className="lg:col-span-1">
-            <div className="lg:sticky lg:top-32">
+            <div className="lg:sticky lg:top-24">
               <h2 className="text-sm font-semibold text-gray-900 mb-4 uppercase tracking-wider">
                 Contents
               </h2>

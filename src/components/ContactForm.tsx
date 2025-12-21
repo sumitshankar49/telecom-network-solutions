@@ -145,9 +145,7 @@ export default function ContactForm({ showContactInfo = true }: ContactFormProps
         setErrors({});
         setTouched({});
         
-        toast.success("Message sent successfully!", {
-          description: "We'll get back to you within 24 hours.",
-        });
+        toast.success("Message sent successfully!");
       }
     } catch (error) {
       console.error('EmailJS Error:', error);

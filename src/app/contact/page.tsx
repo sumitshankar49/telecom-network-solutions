@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
@@ -14,6 +14,7 @@ export default function ContactPage() {
     firstName: "",
     lastName: "",
     email: "",
+    phone: "",
     company: "",
     message: "",
   });
@@ -38,19 +39,19 @@ export default function ContactPage() {
       firstName: "",
       lastName: "",
       email: "",
+      phone: "",
       company: "",
       message: "",
     });
     
     setIsSubmitting(false);
-    toast.success("Thank you for your message!", {
-      description: "We'll get back to you within 24 hours.",
-    });
+    toast.success("Thank you for your message!");
   };
 
   const isFormValid = formData.firstName.trim() !== "" && 
                       formData.lastName.trim() !== "" && 
                       formData.email.trim() !== "" && 
+                      formData.phone.trim() !== "" &&
                       formData.company.trim() !== "" && 
                       formData.message.trim() !== "";
 
@@ -172,14 +173,9 @@ export default function ContactPage() {
                     viewport={{ once: true, margin: "-50px" }}
                     variants={containerVariants}
                   >
-                    <CardHeader className="pb-6">
+                    <CardHeader className="pb-4">
                       <motion.div variants={itemVariants}>
                         <CardTitle className="text-2xl">Send us a message</CardTitle>
-                      </motion.div>
-                      <motion.div variants={itemVariants}>
-                        <CardDescription className="text-base">
-                          We&apos;ll get back to you within 24 hours.
-                        </CardDescription>
                       </motion.div>
                     </CardHeader>
                     <CardContent>
@@ -232,6 +228,23 @@ export default function ContactPage() {
                             placeholder="john@example.com"
                             className="transition-all duration-200 focus:scale-[1.01] h-11"
                             aria-label="Email Address"
+                            aria-required="true"
+                          />
+                        </motion.div>
+                        <motion.div variants={itemVariants}>
+                          <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                            Contact Number *
+                          </label>
+                          <Input 
+                            id="phone" 
+                            name="phone"
+                            type="tel"
+                            required
+                            value={formData.phone}
+                            onChange={handleChange}
+                            placeholder="+91 1234567890"
+                            className="transition-all duration-200 focus:scale-[1.01] h-11"
+                            aria-label="Contact Number"
                             aria-required="true"
                           />
                         </motion.div>

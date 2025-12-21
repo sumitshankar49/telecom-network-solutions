@@ -17,6 +17,7 @@ interface ContactFormProps {
 interface FormErrors {
   name?: string;
   email?: string;
+  phone?: string;
   subject?: string;
   message?: string;
 }
@@ -25,6 +26,7 @@ export default function ContactForm({ showContactInfo = true }: ContactFormProps
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     subject: "",
     message: "",
   });
@@ -43,6 +45,10 @@ export default function ContactForm({ showContactInfo = true }: ContactFormProps
       case 'email':
         if (!value.trim()) return 'Email is required';
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return 'Please enter a valid email';
+        return undefined;
+      case 'phone':
+        if (!value.trim()) return 'Phone number is required';
+        if (!/^[0-9]{10}$/.test(value.replace(/[\s-]/g, ''))) return 'Please enter a valid 10-digit phone number';
         return undefined;
       case 'subject':
         if (!value.trim()) return 'Subject is required';
@@ -97,6 +103,7 @@ export default function ContactForm({ showContactInfo = true }: ContactFormProps
     setTouched({
       name: true,
       email: true,
+      phone: true,
       subject: true,
       message: true
     });
@@ -127,6 +134,7 @@ export default function ContactForm({ showContactInfo = true }: ContactFormProps
         {
           from_name: formData.name,
           from_email: formData.email,
+          from_phone: formData.phone,
           subject: formData.subject,
           message: formData.message,
           to_name: 'DPB Solution Team',
@@ -139,15 +147,14 @@ export default function ContactForm({ showContactInfo = true }: ContactFormProps
         setFormData({
           name: "",
           email: "",
+          phone: "",
           subject: "",
           message: "",
         });
         setErrors({});
         setTouched({});
         
-        toast.success("Message sent successfully!", {
-          description: "We'll get back to you within 24 hours.",
-        });
+        toast.success("Message sent successfully!");
       }
     } catch (error) {
       console.error('EmailJS Error:', error);
@@ -162,6 +169,7 @@ export default function ContactForm({ showContactInfo = true }: ContactFormProps
   const isFormValid = Object.keys(errors).length === 0 && 
                       formData.name.trim() !== "" && 
                       formData.email.trim() !== "" && 
+                      formData.phone.trim() !== "" &&
                       formData.subject.trim() !== "" &&
                       formData.message.trim() !== "";
 
@@ -270,6 +278,32 @@ export default function ContactForm({ showContactInfo = true }: ContactFormProps
                     </p>
                   )}
                 </div>
+              </motion.div>
+              
+              <motion.div variants={itemVariants}>
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                  Phone Number *
+                </label>
+                <Input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  required
+                  value={formData.phone}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  placeholder="Enter your phone number"
+                  className={`w-full transition-all duration-200 focus:scale-[1.02] ${
+                    errors.phone && touched.phone ? 'border-red-500 focus:ring-red-500' : ''
+                  }`}
+                  aria-invalid={!!(errors.phone && touched.phone)}
+                  aria-describedby={errors.phone && touched.phone ? 'phone-error' : undefined}
+                />
+                {errors.phone && touched.phone && (
+                  <p id="phone-error" className="text-red-500 text-xs mt-1" role="alert">
+                    {errors.phone}
+                  </p>
+                )}
               </motion.div>
               
               <motion.div variants={itemVariants}>

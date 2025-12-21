@@ -298,8 +298,8 @@ export default function CareersPage() {
               {POSITIONS.map((position, index) => (
                 <motion.div key={index} variants={scaleIn}>
                   <Card className="hover:shadow-lg transition-shadow duration-300 h-full">
-                    <CardHeader>
-                      <div className="flex items-center justify-between mb-4">
+                <CardHeader className="pb-3">
+                  <div className="flex items-center justify-between mb-4">
                     <div className="bg-blue-100 p-3 rounded-lg">
                       <position.icon className="h-6 w-6 text-blue-600" />
                     </div>
@@ -310,9 +310,6 @@ export default function CareersPage() {
                   <CardTitle className="text-xl font-semibold text-gray-900">
                     {position.title}
                   </CardTitle>
-                  <CardDescription className="text-gray-600">
-                    {position.description}
-                  </CardDescription>
                 </CardHeader>
                 
                 <CardContent>
@@ -359,13 +356,8 @@ export default function CareersPage() {
                       </Button>
                     </DialogTrigger>
                     <DialogContent className="sm:max-w-[650px] max-h-[90vh] overflow-y-auto bg-white border-2 border-blue-200">
-                      <DialogHeader className="space-y-3 pb-4 border-b">
+                      <DialogHeader className="pb-4 border-b">
                         <DialogTitle className="text-2xl font-bold text-gray-900">Apply for {selectedPosition}</DialogTitle>
-                        <DialogDescription className="text-base text-gray-600">
-                          {googleFormId 
-                            ? "Choose how you'd like to submit your application" 
-                            : "Fill out the application form below and we'll get back to you within 48 hours"}
-                        </DialogDescription>
                       </DialogHeader>
                       
                       {googleFormId ? (

@@ -4,31 +4,9 @@ import { motion } from "framer-motion";
 import { Users } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { fadeInUp, scaleIn, staggerContainer } from "@/lib/animations";
+import { LEADERSHIP_TEAM } from "@/constants/about";
 
 export function TeamSection() {
-  const team = [
-    {
-      name: "Dharmendra Ojha",
-      role: "CEO & Founder",
-      description: "Visionary leader with 15+ years in tech innovation."
-    },
-    {
-      name: "Sarah Johnson",
-      role: "CTO",
-      description: "Technical expert specializing in scalable architectures."
-    },
-    {
-      name: "Mike Chen",
-      role: "Head of Design",
-      description: "Creative director focused on user experience excellence."
-    },
-    {
-      name: "Emily Davis",
-      role: "VP of Operations",
-      description: "Operations specialist ensuring seamless project delivery."
-    }
-  ];
-
   return (
     <section className="py-24 lg:py-32 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,7 +23,7 @@ export function TeamSection() {
           whileInView="whileInView"
           className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
-          {team.map((member, index) => (
+          {LEADERSHIP_TEAM.map((member, index) => (
             <motion.div key={index} variants={scaleIn}>
               <Card className="text-center h-full">
                 <CardHeader>

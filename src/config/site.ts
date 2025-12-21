@@ -28,7 +28,7 @@ export const companyInfo = {
   },
   social: {
     linkedin: "https://www.linkedin.com/in/dpb-solution-369b58239",
-    twitter: "https://twitter.com/dpbsolution",
+    twitter: "https://x.com/DpbSolution",
     facebook: "https://www.facebook.com/profile.php?id=61583336047946",
   },
 };
@@ -177,29 +177,83 @@ export const teamMembers = [
 export const testimonials = [
   {
     id: 1,
-    name: "Maish Kumar",
-    company: "TechCorp Industries",
-    role: "IT Director",
+    name: "Project Manager",
+    company: "VIL",
+    role: "Network Operations",
     content:
-      "DPB Solution transformed our IT infrastructure completely. Their expertise in cloud migration saved us 40% on operational costs while improving performance.",
+      "DPB Solution transformed our telecommunications infrastructure completely. Their expertise in network deployment and maintenance has significantly improved our service reliability.",
     rating: 5,
   },
   {
     id: 2,
-    name: "Mohit Kumar",
-    company: "Healthcare Plus",
-    role: "CTO",
+    name: "Technical Lead",
+    company: "TCTSL",
+    role: "Infrastructure Head",
     content:
-      "The cybersecurity solutions provided by DPB Solution gave us peace of mind. Their 24/7 monitoring has prevented multiple security incidents.",
+      "Outstanding telecom solutions and support. DPB Solution's team has been instrumental in optimizing our network performance and reducing operational costs.",
     rating: 5,
   },
   {
     id: 3,
-    name: "Rajesh Kumar",
-    company: "TSTC",
+    name: "Operations Director",
+    company: "Aerdare",
     role: "Operations Manager",
     content:
-      "Excellent VoIP implementation. Our communication efficiency improved dramatically, and the support team is always responsive.",
+      "Excellent implementation of our communication infrastructure. The professionalism and technical expertise of DPB Solution exceeded our expectations.",
+    rating: 5,
+  },
+  {
+    id: 4,
+    name: "IT Manager",
+    company: "Beetel",
+    role: "Technology Head",
+    content:
+      "DPB Solution provided comprehensive telecom solutions that perfectly aligned with our business needs. Their 24/7 support ensures seamless operations.",
+    rating: 5,
+  },
+  {
+    id: 5,
+    name: "Project Director",
+    company: "Sterling and Wilson",
+    role: "Infrastructure Lead",
+    content:
+      "Working with DPB Solution has been a game-changer for our telecom infrastructure projects. Their technical knowledge and commitment to quality is exceptional.",
+    rating: 5,
+  },
+  {
+    id: 6,
+    name: "CTO",
+    company: "Beckhole Digital",
+    role: "Chief Technology Officer",
+    content:
+      "DPB Solution's innovative approach to telecommunications has helped us stay ahead of the curve. Their solutions are reliable, scalable, and cost-effective.",
+    rating: 5,
+  },
+  {
+    id: 7,
+    name: "Network Manager",
+    company: "STL",
+    role: "Network Operations Head",
+    content:
+      "The expertise and dedication shown by DPB Solution in implementing our network infrastructure was remarkable. They delivered beyond expectations.",
+    rating: 5,
+  },
+  {
+    id: 8,
+    name: "Operations Head",
+    company: "Abhay Tele",
+    role: "Operations Director",
+    content:
+      "DPB Solution has been our trusted partner for telecom solutions. Their prompt service and technical excellence have made a significant impact on our operations.",
+    rating: 5,
+  },
+  {
+    id: 9,
+    name: "Department Head",
+    company: "Bihar Government",
+    role: "IT & Communications",
+    content:
+      "DPB Solution delivered robust telecommunications infrastructure for our government initiatives. Their commitment to excellence and timely delivery is commendable.",
     rating: 5,
   },
 ];

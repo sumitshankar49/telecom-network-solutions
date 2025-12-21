@@ -87,7 +87,7 @@ export function ServiceCard({
 
           <div>
             <Button 
-              className="w-full" 
+              className="w-full border-2" 
               variant={popular ? "default" : "outline"}
               onClick={onLearnMore}
             >
